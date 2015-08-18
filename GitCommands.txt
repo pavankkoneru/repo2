@@ -1,0 +1,18 @@
+/***************** Do git pull and then push the changes to git ************************/
+
+git		-->To see list of all common commands
+git diff	-->will show the changes we made in the file
+
+git pull	-->To pull the changes from GIT Repository
+git status	-->To check the status of my local changes
+git add		-->To ad file
+git commit	-->
+git reset	-->Reset will roll bck files from Commit( i.e files which are ready for commit)
+git checkout <<filepath>> -->To undo changes in the file
+git commit -am"Comments"
+git push origin master
+
+git config --global user.email "you@example.com"
+git config --global user.name "Your Name"
+
+git config --list
