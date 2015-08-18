@@ -1,0 +1,77 @@
+
+Managing Remotes / Adding a remote
+Adding a remote
+
+To add a new remote, use the git remote add command on the terminal, in the directory your repository is stored at.
+
+The git remote add command takes two arguments:
+
+    A remote name, for example, origin
+    A remote URL, for example, https://github.com/user/repo.git
+
+For example:
+
+git remote add origin https://github.com/user/repo.git
+# Set a new remote
+
+git remote -v
+# Verify new remote
+# origin  https://github.com/user/repo.git (fetch)
+# origin  https://github.com/user/repo.git (push)
+
+Managing Remotes / Renaming a remote
+Renaming a remote
+
+Use the git remote rename command to rename an existing remote.
+
+The git remote rename command takes two arguments:
+
+    An existing remote name, for example, origin
+    A new name for the remote, for example, destination
+
+Example
+
+The examples below assume you're cloning using HTTPS, which is recommended.
+
+git remote -v
+# View existing remotes
+# origin  https://github.com/OWNER/REPOSITORY.git (fetch)
+# origin  https://github.com/OWNER/REPOSITORY.git (push)
+
+git remote rename origin destination
+# Change remote name from 'origin' to 'destination'
+
+git remote -v
+# Verify remote's new name
+# destination  https://github.com/FORKER/REPOSITORY.git (fetch)
+# destination  https://github.com/FORKER/REPOSITORY.git (push)
+
+
+Managing Remotes / Removing a remote
+Removing a remote
+
+Use the git remote rm command to remove a remote URL from your repository.
+
+The git remote rm command takes one argument:
+
+    A remote name, for example, destination
+
+Example
+
+The examples below assume you're cloning using HTTPS, which is recommended.
+
+git remote -v
+# View current remotes
+# origin  https://github.com/OWNER/REPOSITORY.git (fetch)
+# origin  https://github.com/OWNER/REPOSITORY.git (push)
+# destination  https://github.com/FORKER/REPOSITORY.git (fetch)
+# destination  https://github.com/FORKER/REPOSITORY.git (push)
+
+git remote rm destination
+# Remove remote
+git remote -v
+# Verify it's gone
+# origin  https://github.com/OWNER/REPOSITORY.git (fetch)
+# origin  https://github.com/OWNER/REPOSITORY.git (push)
+
+Note: git remote rm does not delete the remote repository from the server. It simply removes the remote and its references from your local repository.
